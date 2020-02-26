@@ -10,46 +10,46 @@ import com.aliyun.oss.model.OSSObjectSummary;
 import com.aliyun.oss.model.ObjectListing;
 
 /*
-	 * OSSËÄ´óÊôĞÔ£º
-	 * endpoint £ºOSSÓòÃû
-	 * accessKsyID£º·ÃÎÊID
-	 * accessKeySecret:·ÃÎÊÃÜÔ¿
-	 * BucketName:BucketÊÇÓÃÀ´¹ÜÀíObjectµÄ´æ´¢¿Õ¼ä
+	 * OSSå››å¤§å±æ€§ï¼š
+	 * endpoint ï¼šOSSåŸŸå
+	 * accessKsyIDï¼šè®¿é—®ID
+	 * accessKeySecret:è®¿é—®å¯†é’¥
+	 * BucketName:Bucketæ˜¯ç”¨æ¥ç®¡ç†Objectçš„å­˜å‚¨ç©ºé—´
 	 */
 public class OssTest {
 	private static String endpoint="https://oss-cn-shenzhen.aliyuncs.com";
-	private static String accessKeyId="LTAIfTVYN8w5mmi1";
-	private static String accessKeySecret="fDLgyulAXElgA8IZXPuosidGbnvP4f";
+	private static String accessKeyId="";
+	private static String accessKeySecret="";
 	private static String bucketName="niududu-new";
 	
 	public static void main(String[] args) {
-		//Éú³ÉOSSClient¶ÔÏó
+		//ç”ŸæˆOSSClientå¯¹è±¡
 		OSSClient ossClient=new OSSClient(endpoint, accessKeyId, accessKeySecret);
-		//½¡×³ĞÔÅĞ¶ÏÊÇ·ñ´æÔÚ¸ÃBucket¶ÔÏó
+		//å¥å£®æ€§åˆ¤æ–­æ˜¯å¦å­˜åœ¨è¯¥Bucketå¯¹è±¡
 		if(ossClient.doesBucketExist(bucketName)) {
-			System.out.println("¸Ã´æ´¢¿Õ¼ä"+bucketName+"ÒÑ´æÔÚ");
+			System.out.println("è¯¥å­˜å‚¨ç©ºé—´"+bucketName+"å·²å­˜åœ¨");
 		}else {
-			System.out.println("¸Ã´æ´¢¿Õ¼ä"+bucketName+"²»´æÔÚ£¬ÏÖÔÚ´´½¨¡£");
+			System.out.println("è¯¥å­˜å‚¨ç©ºé—´"+bucketName+"ä¸å­˜åœ¨ï¼Œç°åœ¨åˆ›å»ºã€‚");
 			ossClient.createBucket(bucketName);
 		}
 		BucketInfo bucketInfo = ossClient.getBucketInfo(bucketName);
-		System.out.println("Bucket£º"+bucketName+"ĞÅÏ¢ÈçÏÂ");
+		System.out.println("Bucketï¼š"+bucketName+"ä¿¡æ¯å¦‚ä¸‹");
 		System.out.println(bucketInfo.getBucket().getCreationDate());
 		System.out.println(bucketInfo.getBucket().getName());
 		System.out.println(bucketInfo.getBucket().getLocation());
 		System.out.println(bucketInfo.getBucket().toString());
 		
-		//ÉÏ´«Í¼Æ¬ÎÄ¼şµÄÃüÃû£º
+		//ä¸Šä¼ å›¾ç‰‡æ–‡ä»¶çš„å‘½åï¼š
 		String  fileKey ="mobliePay1.jpg";
 //		final String keySuffixWithSlash="parent_directory/";
 //		ossClient.putObject(bucketName, keySuffixWithSlash, new ByteArrayInputStream(new byte[0]));
-		//´Ó±¾µØÎÄ¼şÉÏ´«new File("±¾µØÎÄ¼şÂ·¾¶")´«
-		ossClient.putObject(bucketName,fileKey, new File("C://Users//pc//Desktop//¹ÙÍøÍ¼Æ¬/132.jpg"));
-		 System.out.println("Object£º" + fileKey + "´æÈëOSS³É¹¦¡£");
+		//ä»æœ¬åœ°æ–‡ä»¶ä¸Šä¼ new File("æœ¬åœ°æ–‡ä»¶è·¯å¾„")ä¼ 
+		ossClient.putObject(bucketName,fileKey, new File("C://Users//pc//Desktop//å®˜ç½‘å›¾ç‰‡/132.jpg"));
+		 System.out.println("Objectï¼š" + fileKey + "å­˜å…¥OSSæˆåŠŸã€‚");
 		 
 		 ObjectListing objectListing = ossClient.listObjects(bucketName);
          List<OSSObjectSummary> objectSummary = objectListing.getObjectSummaries();
-         System.out.println("ÄúÓĞÒÔÏÂObject£º");
+         System.out.println("æ‚¨æœ‰ä»¥ä¸‹Objectï¼š");
          for (OSSObjectSummary object : objectSummary) {
              System.out.println("\t" + object.getKey());
          }
