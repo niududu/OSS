@@ -13,24 +13,24 @@ import com.aliyun.oss.model.ObjectListing;
 
 public class Testdelete {
 	private static String endpoint="oss-cn-beijing.aliyuncs.com";
-	private static String accessKeyId="LTAIfTVYN8w5mmi1";
-	private static String accessKeySecret="fDLgyulAXElgA8IZXPuosidGbnvP4f";
+	private static String accessKeyId="";
+	private static String accessKeySecret="";
 	private static String bucketName="qwe-nie";
 	public static void main(String[] args) {
 		OSSClient ossClient=new OSSClient(endpoint, accessKeyId, accessKeySecret);
 		if(ossClient.doesBucketExist(bucketName)) {
-			System.out.println("ÒÑ´æÔÚ¸Ã´æ´¢ÇøÓò£¬BucketName£º"+bucketName);
+			System.out.println("å·²å­˜åœ¨è¯¥å­˜å‚¨åŒºåŸŸï¼ŒBucketNameï¼š"+bucketName);
 		}else {
-			System.out.println("Ã»ÓĞ¸Ã"+bucketName+"´æ´¢ÇøÓò£¬´´½¨¸Ã´æ´¢ÇøÓò¡£");
+			System.out.println("æ²¡æœ‰è¯¥"+bucketName+"å­˜å‚¨åŒºåŸŸï¼Œåˆ›å»ºè¯¥å­˜å‚¨åŒºåŸŸã€‚");
 			ossClient.createBucket(bucketName);
 		}
 		listObject(ossClient);
-		System.out.println("------Í¼Æ¬ÉÏ´«--------");
-		//Í¼Æ¬ÉÏ´«
+		System.out.println("------å›¾ç‰‡ä¸Šä¼ --------");
+		//å›¾ç‰‡ä¸Šä¼ 
 		upload(ossClient);
 		listObject(ossClient);
-		//½«ÉÏ´«µÄÎÄ¼şÉ¾³ı
-		System.out.println("-------ÎÄ¼şÉ¾³ı-------");
+		//å°†ä¸Šä¼ çš„æ–‡ä»¶åˆ é™¤
+		System.out.println("-------æ–‡ä»¶åˆ é™¤-------");
 		delete(ossClient);
 		System.out.println("--------------");
 		
@@ -42,22 +42,22 @@ public class Testdelete {
 	}
 	private static void delete(OSSClient ossClient) {
 		if(ossClient.doesObjectExist(bucketName, "*.jpg")) {
-			System.out.println("¸Ã´æ´¢¿Õ¼äÎŞÄÚÈİ £¬ÎŞ·¨½øĞĞÉ¾³ı²Ù×÷");
+			System.out.println("è¯¥å­˜å‚¨ç©ºé—´æ— å†…å®¹ ï¼Œæ— æ³•è¿›è¡Œåˆ é™¤æ“ä½œ");
 		}else {
 			ossClient.deleteObject(bucketName, "four.jpg");
 			BucketInfo info=ossClient.getBucketInfo(bucketName);
-			System.out.println("É¾³ı³É¹¦");
+			System.out.println("åˆ é™¤æˆåŠŸ");
 		}
 	}
 	/**
-	 * ÉÏ´«Í¼Æ¬ÎÄ¼ş
+	 * ä¸Šä¼ å›¾ç‰‡æ–‡ä»¶
 	 * @param ossClient
 	 */
 	private static void upload(OSSClient ossClient) {
 		final  String fileKey1="three.jpg";
-		ossClient.putObject( bucketName,fileKey1, new File("C:\\Users\\pc\\Desktop\\¹ÙÍøÍ¼Æ¬\\netpay.jpg"));
+		ossClient.putObject( bucketName,fileKey1, new File("C:\\Users\\pc\\Desktop\\å®˜ç½‘å›¾ç‰‡\\netpay.jpg"));
 		final  String fileKey2="four.jpg";
-		ossClient.putObject( bucketName,fileKey2, new File("C:\\Users\\pc\\Desktop\\¹ÙÍøÍ¼Æ¬\\mobilepay.jpg"));
+		ossClient.putObject( bucketName,fileKey2, new File("C:\\Users\\pc\\Desktop\\å®˜ç½‘å›¾ç‰‡\\mobilepay.jpg"));
 			
 		}
 	private static void listObject(OSSClient ossClient) {
