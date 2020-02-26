@@ -1,21 +1,21 @@
 /**
- * Ê¾ÀıËµÃ÷
+ * ç¤ºä¾‹è¯´æ˜
  * 
- * HelloOSSÊÇOSS Java SDKµÄÊ¾Àı³ÌĞò£¬Äú¿ÉÒÔĞŞ¸Äendpoint¡¢accessKeyId¡¢accessKeySecret¡¢bucketNameºóÖ±½ÓÔËĞĞ¡£
- * ÔËĞĞ·½·¨Çë²Î¿¼README¡£
+ * HelloOSSæ˜¯OSS Java SDKçš„ç¤ºä¾‹ç¨‹åºï¼Œæ‚¨å¯ä»¥ä¿®æ”¹endpointã€accessKeyIdã€accessKeySecretã€bucketNameåç›´æ¥è¿è¡Œã€‚
+ * è¿è¡Œæ–¹æ³•è¯·å‚è€ƒREADMEã€‚
  * 
- * ±¾Ê¾ÀıÖĞµÄ²¢²»°üÀ¨OSS Java SDKµÄËùÓĞ¹¦ÄÜ£¬ÏêÏ¸¹¦ÄÜ¼°Ê¹ÓÃ·½·¨£¬Çë²Î¿´¡°SDKÊÖ²á > Java-SDK¡±£¬
- * Á´½ÓµØÖ·ÊÇ£ºhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/preface.html?spm=5176.docoss/sdk/java-sdk/¡£
+ * æœ¬ç¤ºä¾‹ä¸­çš„å¹¶ä¸åŒ…æ‹¬OSS Java SDKçš„æ‰€æœ‰åŠŸèƒ½ï¼Œè¯¦ç»†åŠŸèƒ½åŠä½¿ç”¨æ–¹æ³•ï¼Œè¯·å‚çœ‹â€œSDKæ‰‹å†Œ > Java-SDKâ€ï¼Œ
+ * é“¾æ¥åœ°å€æ˜¯ï¼šhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/preface.html?spm=5176.docoss/sdk/java-sdk/ã€‚
  * 
- * µ÷ÓÃOSS Java SDKµÄ·½·¨Ê±£¬Å×³öÒì³£±íÊ¾ÓĞ´íÎó·¢Éú£»Ã»ÓĞÅ×³öÒì³£±íÊ¾³É¹¦Ö´ĞĞ¡£
- * µ±´íÎó·¢ÉúÊ±£¬OSS Java SDKµÄ·½·¨»áÅ×³öÒì³££¬Òì³£ÖĞ°üÀ¨´íÎóÂë¡¢´íÎóĞÅÏ¢£¬ÏêÏ¸Çë²Î¿´¡°SDKÊÖ²á > Java-SDK > Òì³£´¦Àí¡±£¬
- * Á´½ÓµØÖ·ÊÇ£ºhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/exception.html?spm=5176.docoss/api-reference/error-response¡£
+ * è°ƒç”¨OSS Java SDKçš„æ–¹æ³•æ—¶ï¼ŒæŠ›å‡ºå¼‚å¸¸è¡¨ç¤ºæœ‰é”™è¯¯å‘ç”Ÿï¼›æ²¡æœ‰æŠ›å‡ºå¼‚å¸¸è¡¨ç¤ºæˆåŠŸæ‰§è¡Œã€‚
+ * å½“é”™è¯¯å‘ç”Ÿæ—¶ï¼ŒOSS Java SDKçš„æ–¹æ³•ä¼šæŠ›å‡ºå¼‚å¸¸ï¼Œå¼‚å¸¸ä¸­åŒ…æ‹¬é”™è¯¯ç ã€é”™è¯¯ä¿¡æ¯ï¼Œè¯¦ç»†è¯·å‚çœ‹â€œSDKæ‰‹å†Œ > Java-SDK > å¼‚å¸¸å¤„ç†â€ï¼Œ
+ * é“¾æ¥åœ°å€æ˜¯ï¼šhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/exception.html?spm=5176.docoss/api-reference/error-responseã€‚
  * 
- * OSS¿ØÖÆÌ¨¿ÉÒÔÖ±¹ÛµÄ¿´µ½Äúµ÷ÓÃOSS Java SDKµÄ½á¹û£¬OSS¿ØÖÆÌ¨µØÖ·ÊÇ£ºhttps://oss.console.aliyun.com/index#/¡£
- * OSS¿ØÖÆÌ¨Ê¹ÓÃ·½·¨Çë²Î¿´ÎÄµµÖĞĞÄµÄ¡°¿ØÖÆÌ¨ÓÃ»§Ö¸ÄÏ¡±£¬ Ö¸ÄÏµÄÀ´Á´½ÓµØÖ·ÊÇ£ºhttps://help.aliyun.com/document_detail/oss/getting-started/get-started.html?spm=5176.docoss/user_guide¡£
+ * OSSæ§åˆ¶å°å¯ä»¥ç›´è§‚çš„çœ‹åˆ°æ‚¨è°ƒç”¨OSS Java SDKçš„ç»“æœï¼ŒOSSæ§åˆ¶å°åœ°å€æ˜¯ï¼šhttps://oss.console.aliyun.com/index#/ã€‚
+ * OSSæ§åˆ¶å°ä½¿ç”¨æ–¹æ³•è¯·å‚çœ‹æ–‡æ¡£ä¸­å¿ƒçš„â€œæ§åˆ¶å°ç”¨æˆ·æŒ‡å—â€ï¼Œ æŒ‡å—çš„æ¥é“¾æ¥åœ°å€æ˜¯ï¼šhttps://help.aliyun.com/document_detail/oss/getting-started/get-started.html?spm=5176.docoss/user_guideã€‚
  * 
- * OSSµÄÎÄµµÖĞĞÄµØÖ·ÊÇ£ºhttps://help.aliyun.com/document_detail/oss/user_guide/overview.html¡£
- * OSS Java SDKµÄÎÄµµµØÖ·ÊÇ£ºhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/install.html?spm=5176.docoss/sdk/java-sdk¡£
+ * OSSçš„æ–‡æ¡£ä¸­å¿ƒåœ°å€æ˜¯ï¼šhttps://help.aliyun.com/document_detail/oss/user_guide/overview.htmlã€‚
+ * OSS Java SDKçš„æ–‡æ¡£åœ°å€æ˜¯ï¼šhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/install.html?spm=5176.docoss/sdk/java-sdkã€‚
  * 
  */
 
@@ -45,75 +45,75 @@ import org.apache.log4j.PropertyConfigurator;
 public class test {
     static Logger logger = Logger.getLogger(test.class);
 
-    // endpointÊÇ·ÃÎÊOSSµÄÓòÃû¡£Èç¹ûÄúÒÑ¾­ÔÚOSSµÄ¿ØÖÆÌ¨ÉÏ ´´½¨ÁËBucket£¬ÇëÔÚ¿ØÖÆÌ¨ÉÏ²é¿´ÓòÃû¡£
-    // Èç¹ûÄú»¹Ã»ÓĞ´´½¨Bucket£¬endpointÑ¡ÔñÇë²Î¿´ÎÄµµÖĞĞÄµÄ¡°¿ª·¢ÈËÔ±Ö¸ÄÏ > »ù±¾¸ÅÄî > ·ÃÎÊÓòÃû¡±£¬
-    // Á´½ÓµØÖ·ÊÇ£ºhttps://help.aliyun.com/document_detail/oss/user_guide/oss_concept/endpoint.html?spm=5176.docoss/user_guide/endpoint_region
-    // endpointµÄ¸ñÊ½ĞÎÈç¡°http://oss-cn-hangzhou.aliyuncs.com/¡±£¬×¢Òâhttp://ºó²»´øbucketÃû³Æ£¬
-    // ±ÈÈç¡°http://bucket-name.oss-cn-hangzhou.aliyuncs.com¡±£¬ÊÇ´íÎóµÄendpoint£¬ÇëÈ¥µôÆäÖĞµÄ¡°bucket-name¡±¡£
+    // endpointæ˜¯è®¿é—®OSSçš„åŸŸåã€‚å¦‚æœæ‚¨å·²ç»åœ¨OSSçš„æ§åˆ¶å°ä¸Š åˆ›å»ºäº†Bucketï¼Œè¯·åœ¨æ§åˆ¶å°ä¸ŠæŸ¥çœ‹åŸŸåã€‚
+    // å¦‚æœæ‚¨è¿˜æ²¡æœ‰åˆ›å»ºBucketï¼Œendpointé€‰æ‹©è¯·å‚çœ‹æ–‡æ¡£ä¸­å¿ƒçš„â€œå¼€å‘äººå‘˜æŒ‡å— > åŸºæœ¬æ¦‚å¿µ > è®¿é—®åŸŸåâ€ï¼Œ
+    // é“¾æ¥åœ°å€æ˜¯ï¼šhttps://help.aliyun.com/document_detail/oss/user_guide/oss_concept/endpoint.html?spm=5176.docoss/user_guide/endpoint_region
+    // endpointçš„æ ¼å¼å½¢å¦‚â€œhttp://oss-cn-hangzhou.aliyuncs.com/â€ï¼Œæ³¨æ„http://åä¸å¸¦bucketåç§°ï¼Œ
+    // æ¯”å¦‚â€œhttp://bucket-name.oss-cn-hangzhou.aliyuncs.comâ€ï¼Œæ˜¯é”™è¯¯çš„endpointï¼Œè¯·å»æ‰å…¶ä¸­çš„â€œbucket-nameâ€ã€‚
     private static String endpoint = "https://oss-cn-shenzhen.aliyuncs.com";
 
-    // accessKeyIdºÍaccessKeySecretÊÇOSSµÄ·ÃÎÊÃÜÔ¿£¬Äú¿ÉÒÔÔÚ¿ØÖÆÌ¨ÉÏ´´½¨ºÍ²é¿´£¬
-    // ´´½¨ºÍ²é¿´·ÃÎÊÃÜÔ¿µÄÁ´½ÓµØÖ·ÊÇ£ºhttps://ak-console.aliyun.com/#/¡£
-    // ×¢Òâ£ºaccessKeyIdºÍaccessKeySecretÇ°ºó¶¼Ã»ÓĞ¿Õ¸ñ£¬´Ó¿ØÖÆÌ¨¸´ÖÆÊ±Çë¼ì²é²¢È¥³ı¶àÓàµÄ¿Õ¸ñ¡£
-    private static String accessKeyId = "LTAIfTVYN8w5mmi1";
-    private static String accessKeySecret = "fDLgyulAXElgA8IZXPuosidGbnvP4f";
+    // accessKeyIdå’ŒaccessKeySecretæ˜¯OSSçš„è®¿é—®å¯†é’¥ï¼Œæ‚¨å¯ä»¥åœ¨æ§åˆ¶å°ä¸Šåˆ›å»ºå’ŒæŸ¥çœ‹ï¼Œ
+    // åˆ›å»ºå’ŒæŸ¥çœ‹è®¿é—®å¯†é’¥çš„é“¾æ¥åœ°å€æ˜¯ï¼šhttps://ak-console.aliyun.com/#/ã€‚
+    // æ³¨æ„ï¼šaccessKeyIdå’ŒaccessKeySecretå‰åéƒ½æ²¡æœ‰ç©ºæ ¼ï¼Œä»æ§åˆ¶å°å¤åˆ¶æ—¶è¯·æ£€æŸ¥å¹¶å»é™¤å¤šä½™çš„ç©ºæ ¼ã€‚
+    private static String accessKeyId = "";
+    private static String accessKeySecret = "";
 
-    // BucketÓÃÀ´¹ÜÀíËù´æ´¢ObjectµÄ´æ´¢¿Õ¼ä£¬ÏêÏ¸ÃèÊöÇë²Î¿´¡°¿ª·¢ÈËÔ±Ö¸ÄÏ > »ù±¾¸ÅÄî > OSS»ù±¾¸ÅÄî½éÉÜ¡±¡£
-    // BucketÃüÃû¹æ·¶ÈçÏÂ£ºÖ»ÄÜ°üÀ¨Ğ¡Ğ´×ÖÄ¸£¬Êı×ÖºÍ¶ÌºáÏß£¨-£©£¬±ØĞëÒÔĞ¡Ğ´×ÖÄ¸»òÕßÊı×Ö¿ªÍ·£¬³¤¶È±ØĞëÔÚ3-63×Ö½ÚÖ®¼ä¡£
+    // Bucketç”¨æ¥ç®¡ç†æ‰€å­˜å‚¨Objectçš„å­˜å‚¨ç©ºé—´ï¼Œè¯¦ç»†æè¿°è¯·å‚çœ‹â€œå¼€å‘äººå‘˜æŒ‡å— > åŸºæœ¬æ¦‚å¿µ > OSSåŸºæœ¬æ¦‚å¿µä»‹ç»â€ã€‚
+    // Bucketå‘½åè§„èŒƒå¦‚ä¸‹ï¼šåªèƒ½åŒ…æ‹¬å°å†™å­—æ¯ï¼Œæ•°å­—å’ŒçŸ­æ¨ªçº¿ï¼ˆ-ï¼‰ï¼Œå¿…é¡»ä»¥å°å†™å­—æ¯æˆ–è€…æ•°å­—å¼€å¤´ï¼Œé•¿åº¦å¿…é¡»åœ¨3-63å­—èŠ‚ä¹‹é—´ã€‚
     private static String bucketName = "vmware-niududu";
 
-    // ObjectÊÇOSS´æ´¢Êı¾İµÄ»ù±¾µ¥Ôª£¬³ÆÎªOSSµÄ¶ÔÏó£¬Ò²±»³ÆÎªOSSµÄÎÄ¼ş¡£ÏêÏ¸ÃèÊöÇë²Î¿´¡°¿ª·¢ÈËÔ±Ö¸ÄÏ > »ù±¾¸ÅÄî > OSS»ù±¾¸ÅÄî½éÉÜ¡±¡£
-    // ObjectÃüÃû¹æ·¶ÈçÏÂ£ºÊ¹ÓÃUTF-8±àÂë£¬³¤¶È±ØĞëÔÚ1-1023×Ö½ÚÖ®¼ä£¬²»ÄÜÒÔ¡°/¡±»òÕß¡°\¡±×Ö·û¿ªÍ·¡£
+    // Objectæ˜¯OSSå­˜å‚¨æ•°æ®çš„åŸºæœ¬å•å…ƒï¼Œç§°ä¸ºOSSçš„å¯¹è±¡ï¼Œä¹Ÿè¢«ç§°ä¸ºOSSçš„æ–‡ä»¶ã€‚è¯¦ç»†æè¿°è¯·å‚çœ‹â€œå¼€å‘äººå‘˜æŒ‡å— > åŸºæœ¬æ¦‚å¿µ > OSSåŸºæœ¬æ¦‚å¿µä»‹ç»â€ã€‚
+    // Objectå‘½åè§„èŒƒå¦‚ä¸‹ï¼šä½¿ç”¨UTF-8ç¼–ç ï¼Œé•¿åº¦å¿…é¡»åœ¨1-1023å­—èŠ‚ä¹‹é—´ï¼Œä¸èƒ½ä»¥â€œ/â€æˆ–è€…â€œ\â€å­—ç¬¦å¼€å¤´ã€‚
     private static String firstKey = "test1.txt";
 
     public static void main(String[] args) {
 
-        // ÈÕÖ¾ÅäÖÃ£¬OSS Java SDKÊ¹ÓÃlog4j¼ÇÂ¼´íÎóĞÅÏ¢¡£Ê¾Àı³ÌĞò»áÔÚ¹¤³ÌÄ¿Â¼ÏÂÉú³É¡°oss-demo.log¡±ÈÕÖ¾ÎÄ¼ş£¬Ä¬ÈÏÈÕÖ¾¼¶±ğÊÇINFO¡£
-        // ÈÕÖ¾µÄÅäÖÃÎÄ¼şÊÇ¡°conf/log4j.properties¡±£¬Èç¹ûÄú²»ĞèÒªÈÕÖ¾£¬¿ÉÒÔÃ»ÓĞÈÕÖ¾ÅäÖÃÎÄ¼şºÍÏÂÃæµÄÈÕÖ¾ÅäÖÃ¡£
+        // æ—¥å¿—é…ç½®ï¼ŒOSS Java SDKä½¿ç”¨log4jè®°å½•é”™è¯¯ä¿¡æ¯ã€‚ç¤ºä¾‹ç¨‹åºä¼šåœ¨å·¥ç¨‹ç›®å½•ä¸‹ç”Ÿæˆâ€œoss-demo.logâ€æ—¥å¿—æ–‡ä»¶ï¼Œé»˜è®¤æ—¥å¿—çº§åˆ«æ˜¯INFOã€‚
+        // æ—¥å¿—çš„é…ç½®æ–‡ä»¶æ˜¯â€œconf/log4j.propertiesâ€ï¼Œå¦‚æœæ‚¨ä¸éœ€è¦æ—¥å¿—ï¼Œå¯ä»¥æ²¡æœ‰æ—¥å¿—é…ç½®æ–‡ä»¶å’Œä¸‹é¢çš„æ—¥å¿—é…ç½®ã€‚
         PropertyConfigurator.configure("D://java//eclipse-jee-oxygen-1a-win32-x86_64//eclipse-workspace//OSS//src//main//resources//log4j.properties");
 
         logger.info("Started");
 
-        // Éú³ÉOSSClient£¬Äú¿ÉÒÔÖ¸¶¨Ò»Ğ©²ÎÊı£¬Ïê¼û¡°SDKÊÖ²á > Java-SDK > ³õÊ¼»¯¡±£¬
-        // Á´½ÓµØÖ·ÊÇ£ºhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/init.html?spm=5176.docoss/sdk/java-sdk/get-start
+        // ç”ŸæˆOSSClientï¼Œæ‚¨å¯ä»¥æŒ‡å®šä¸€äº›å‚æ•°ï¼Œè¯¦è§â€œSDKæ‰‹å†Œ > Java-SDK > åˆå§‹åŒ–â€ï¼Œ
+        // é“¾æ¥åœ°å€æ˜¯ï¼šhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/init.html?spm=5176.docoss/sdk/java-sdk/get-start
         OSSClient ossClient = new OSSClient(endpoint, accessKeyId, accessKeySecret);
 
         try {
 
-            // ÅĞ¶ÏBucketÊÇ·ñ´æÔÚ¡£ÏêÏ¸Çë²Î¿´¡°SDKÊÖ²á > Java-SDK > ¹ÜÀíBucket¡±¡£
-            // Á´½ÓµØÖ·ÊÇ£ºhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/manage_bucket.html?spm=5176.docoss/sdk/java-sdk/init
+            // åˆ¤æ–­Bucketæ˜¯å¦å­˜åœ¨ã€‚è¯¦ç»†è¯·å‚çœ‹â€œSDKæ‰‹å†Œ > Java-SDK > ç®¡ç†Bucketâ€ã€‚
+            // é“¾æ¥åœ°å€æ˜¯ï¼šhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/manage_bucket.html?spm=5176.docoss/sdk/java-sdk/init
             if (ossClient.doesBucketExist(bucketName)) {
-                System.out.println("ÄúÒÑ¾­´´½¨Bucket£º" + bucketName + "¡£");
+                System.out.println("æ‚¨å·²ç»åˆ›å»ºBucketï¼š" + bucketName + "ã€‚");
             } else {
-                System.out.println("ÄúµÄBucket²»´æÔÚ£¬´´½¨Bucket£º" + bucketName + "¡£");
-                // ´´½¨Bucket¡£ÏêÏ¸Çë²Î¿´¡°SDKÊÖ²á > Java-SDK > ¹ÜÀíBucket¡±¡£
-                // Á´½ÓµØÖ·ÊÇ£ºhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/manage_bucket.html?spm=5176.docoss/sdk/java-sdk/init
+                System.out.println("æ‚¨çš„Bucketä¸å­˜åœ¨ï¼Œåˆ›å»ºBucketï¼š" + bucketName + "ã€‚");
+                // åˆ›å»ºBucketã€‚è¯¦ç»†è¯·å‚çœ‹â€œSDKæ‰‹å†Œ > Java-SDK > ç®¡ç†Bucketâ€ã€‚
+                // é“¾æ¥åœ°å€æ˜¯ï¼šhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/manage_bucket.html?spm=5176.docoss/sdk/java-sdk/init
                 ossClient.createBucket(bucketName);
             }
 
-            // ²é¿´BucketĞÅÏ¢¡£ÏêÏ¸Çë²Î¿´¡°SDKÊÖ²á > Java-SDK > ¹ÜÀíBucket¡±¡£
-            // Á´½ÓµØÖ·ÊÇ£ºhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/manage_bucket.html?spm=5176.docoss/sdk/java-sdk/init
+            // æŸ¥çœ‹Bucketä¿¡æ¯ã€‚è¯¦ç»†è¯·å‚çœ‹â€œSDKæ‰‹å†Œ > Java-SDK > ç®¡ç†Bucketâ€ã€‚
+            // é“¾æ¥åœ°å€æ˜¯ï¼šhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/manage_bucket.html?spm=5176.docoss/sdk/java-sdk/init
             BucketInfo info = ossClient.getBucketInfo(bucketName);
-            System.out.println("Bucket " + bucketName + "µÄĞÅÏ¢ÈçÏÂ£º");
-            System.out.println("\tÊı¾İÖĞĞÄ£º" + info.getBucket().getLocation());
-            System.out.println("\t´´½¨Ê±¼ä£º" + info.getBucket().getCreationDate());
-            System.out.println("\tÓÃ»§±êÖ¾£º" + info.getBucket().getOwner());
+            System.out.println("Bucket " + bucketName + "çš„ä¿¡æ¯å¦‚ä¸‹ï¼š");
+            System.out.println("\tæ•°æ®ä¸­å¿ƒï¼š" + info.getBucket().getLocation());
+            System.out.println("\tåˆ›å»ºæ—¶é—´ï¼š" + info.getBucket().getCreationDate());
+            System.out.println("\tç”¨æˆ·æ ‡å¿—ï¼š" + info.getBucket().getOwner());
 
-            //»ñÈ¡ÎÄ¼ş
+            //è·å–æ–‡ä»¶
 //            File file=new File("H://oss-img/gintoki.jpg");
 //            @SuppressWarnings("resource")
 //			FileInputStream input=new FileInputStream(file);
 //            FileChannel channel=input.getChannel();
 //            ByteBuffer byteBuffer = ByteBuffer.allocate((int) channel.size()); 
-            // °Ñ×Ö·û´®´æÈëOSS£¬ObjectµÄÃû³ÆÎªfirstKey¡£ÏêÏ¸Çë²Î¿´¡°SDKÊÖ²á > Java-SDK > ÉÏ´«ÎÄ¼ş¡±¡£
-            // Á´½ÓµØÖ·ÊÇ£ºhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/upload_object.html?spm=5176.docoss/user_guide/upload_object
+            // æŠŠå­—ç¬¦ä¸²å­˜å…¥OSSï¼ŒObjectçš„åç§°ä¸ºfirstKeyã€‚è¯¦ç»†è¯·å‚çœ‹â€œSDKæ‰‹å†Œ > Java-SDK > ä¸Šä¼ æ–‡ä»¶â€ã€‚
+            // é“¾æ¥åœ°å€æ˜¯ï¼šhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/upload_object.html?spm=5176.docoss/user_guide/upload_object
 //           InputStream is = new ByteArrayInputStream(byteBuffer.array());
             InputStream is = new ByteArrayInputStream("test".getBytes());
             ossClient.putObject(bucketName, firstKey, is);
-            System.out.println("Object£º" + firstKey + "´æÈëOSS³É¹¦¡£");
+            System.out.println("Objectï¼š" + firstKey + "å­˜å…¥OSSæˆåŠŸã€‚");
 
-            // ÏÂÔØÎÄ¼ş¡£ÏêÏ¸Çë²Î¿´¡°SDKÊÖ²á > Java-SDK > ÏÂÔØÎÄ¼ş¡±¡£
-            // Á´½ÓµØÖ·ÊÇ£ºhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/download_object.html?spm=5176.docoss/sdk/java-sdk/manage_object
+            // ä¸‹è½½æ–‡ä»¶ã€‚è¯¦ç»†è¯·å‚çœ‹â€œSDKæ‰‹å†Œ > Java-SDK > ä¸‹è½½æ–‡ä»¶â€ã€‚
+            // é“¾æ¥åœ°å€æ˜¯ï¼šhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/download_object.html?spm=5176.docoss/sdk/java-sdk/manage_object
             OSSObject ossObject = ossClient.getObject(bucketName, firstKey);
             InputStream inputStream = ossObject.getObjectContent();
             StringBuilder objectContent = new StringBuilder();
@@ -126,29 +126,29 @@ public class test {
             }
             
             inputStream.close();
-            System.out.println("Object£º" + firstKey + "µÄÄÚÈİÊÇ£º" + objectContent);
+            System.out.println("Objectï¼š" + firstKey + "çš„å†…å®¹æ˜¯ï¼š" + objectContent);
 
-            // ÎÄ¼ş´æ´¢ÈëOSS£¬ObjectµÄÃû³ÆÎªfileKey¡£ÏêÏ¸Çë²Î¿´¡°SDKÊÖ²á > Java-SDK > ÉÏ´«ÎÄ¼ş¡±¡£
-            // Á´½ÓµØÖ·ÊÇ£ºhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/upload_object.html?spm=5176.docoss/user_guide/upload_object
+            // æ–‡ä»¶å­˜å‚¨å…¥OSSï¼ŒObjectçš„åç§°ä¸ºfileKeyã€‚è¯¦ç»†è¯·å‚çœ‹â€œSDKæ‰‹å†Œ > Java-SDK > ä¸Šä¼ æ–‡ä»¶â€ã€‚
+            // é“¾æ¥åœ°å€æ˜¯ï¼šhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/upload_object.html?spm=5176.docoss/user_guide/upload_object
             String fileKey = "132.jpg";
-            ossClient.putObject(bucketName, fileKey,new File("C://Users//pc//Desktop//¹ÙÍøÍ¼Æ¬/132.jpg"));
-            System.out.println("Object£º" + fileKey + "´æÈëOSS³É¹¦¡£");
+            ossClient.putObject(bucketName, fileKey,new File("C://Users//pc//Desktop//å®˜ç½‘å›¾ç‰‡/132.jpg"));
+            System.out.println("Objectï¼š" + fileKey + "å­˜å…¥OSSæˆåŠŸã€‚");
 
-            // ²é¿´BucketÖĞµÄObject¡£ÏêÏ¸Çë²Î¿´¡°SDKÊÖ²á > Java-SDK > ¹ÜÀíÎÄ¼ş¡±¡£
-            // Á´½ÓµØÖ·ÊÇ£ºhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/manage_object.html?spm=5176.docoss/sdk/java-sdk/manage_bucket
+            // æŸ¥çœ‹Bucketä¸­çš„Objectã€‚è¯¦ç»†è¯·å‚çœ‹â€œSDKæ‰‹å†Œ > Java-SDK > ç®¡ç†æ–‡ä»¶â€ã€‚
+            // é“¾æ¥åœ°å€æ˜¯ï¼šhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/manage_object.html?spm=5176.docoss/sdk/java-sdk/manage_bucket
             ObjectListing objectListing = ossClient.listObjects(bucketName);
             List<OSSObjectSummary> objectSummary = objectListing.getObjectSummaries();
-            System.out.println("ÄúÓĞÒÔÏÂObject£º");
+            System.out.println("æ‚¨æœ‰ä»¥ä¸‹Objectï¼š");
             for (OSSObjectSummary object : objectSummary) {
                 System.out.println("\t" + object.getKey());
             }
 
-            // É¾³ıObject¡£ÏêÏ¸Çë²Î¿´¡°SDKÊÖ²á > Java-SDK > ¹ÜÀíÎÄ¼ş¡±¡£
-            // Á´½ÓµØÖ·ÊÇ£ºhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/manage_object.html?spm=5176.docoss/sdk/java-sdk/manage_bucket
+            // åˆ é™¤Objectã€‚è¯¦ç»†è¯·å‚çœ‹â€œSDKæ‰‹å†Œ > Java-SDK > ç®¡ç†æ–‡ä»¶â€ã€‚
+            // é“¾æ¥åœ°å€æ˜¯ï¼šhttps://help.aliyun.com/document_detail/oss/sdk/java-sdk/manage_object.html?spm=5176.docoss/sdk/java-sdk/manage_bucket
  //           ossClient.deleteObject(bucketName, firstKey);
-            System.out.println("É¾³ıObject£º" + firstKey + "³É¹¦¡£");
+            System.out.println("åˆ é™¤Objectï¼š" + firstKey + "æˆåŠŸã€‚");
  //           ossClient.deleteObject(bucketName, fileKey);
-            System.out.println("É¾³ıObject£º" + fileKey + "³É¹¦¡£");
+            System.out.println("åˆ é™¤Objectï¼š" + fileKey + "æˆåŠŸã€‚");
             OSSObject object = ossClient.getObject(bucketName,fileKey);
    
         } catch (OSSException oe) {
